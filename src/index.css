@@ -1755,3 +1755,34 @@ html {
 
 }
 
+
+.recipient-name-input {
+  width: 100%;
+  max-width: 360px;
+  padding: 13px 18px;
+  border: 1px solid #d8b88b;
+  border-radius: 30px;
+  background: #fffaf3;
+  color: #5b4035;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipient-name-input:focus {
+  border-color: #bd8955;
+  box-shadow: 0 0 0 3px rgba(189, 137, 85, 0.15);
+}
+
+.recipient-name-input::placeholder {
+  color: #a58d7b;
+}
+
+@media (max-width: 600px) {
+  .recipient-name-input {
+    max-width: 100%;
+  }
+}
+
+

@@ -6,16 +6,59 @@ import couplePhoto1 from "../assets/images/sangeet_moment.png";
 import couplePhoto2 from "../assets/images/haldi_moments.png";
 import couplePhoto3 from "../assets/images/wedding_moments.png";
 
-const invitationMessage =
-  "With love, we invite you to celebrate the wedding of Sanket & Pranjali on 18 December 2026 at 12:30 PM at Chandralok Creation, Chandrapur.";
+// const invitationMessage =
+//   "With love, we invite you to celebrate the wedding of Sanket & Pranjali on 18 December 2026 at 12:30 PM at Chandralok Creation, Chandrapur.";
+
 
 export default function Footer() {
+  const [recipientName, setRecipientName] = useState("");
   const [copied, setCopied] = useState(false);
 
   const inviteUrl =
     typeof window !== "undefined" ? window.location.href : "";
 
-  const shareMessage = `${invitationMessage}\n\nOur wedding invitation: ${inviteUrl}`;
+  // const shareMessage = `${invitationMessage}\n\nOur wedding events invitation: ${inviteUrl}`;
+
+
+  // const shareMessage = `Hi @all,
+
+  // We are excited to share the dates for our upcoming wedding celebrations and hope you can join us!
+
+  // 📅 Schedule at a glance:
+  // • 16th Dec: Engagement (4:00 PM) & Sangeet (7:00 PM) @ Chandralok Creation
+  // • 17th Dec: Haldi @ Respective Homes
+  // • 18th Dec: Wedding (12:30 PM) @ Chandralok Creation
+
+  // 🕺 Get your dance shoes ready and start preparing for the Sangeet performances!
+
+  // Official invitation and details to follow separately. Please save the dates to celebrate with us! 💛
+
+  // Our wedding invitation:
+  // ${inviteUrl}
+
+  // Warm regards,
+  // Sanket & Pranjali`;
+
+
+  const shareMessage = `Hi ${recipientName.trim() || "there"},
+
+  We are delighted to share the joyous occasion of our son's wedding celebrations. It would mean so much to us to have you join our family in celebrating these beautiful moments!
+
+  \u{1F4C5} Schedule at a glance:
+  • 16th Dec: Engagement (4:00 PM) & Sangeet (7:00 PM) @ Chandralok Creation, Datala Road, Chandrapur
+  • 17th Dec: Haldi @ Our Home (Trimurti Nagar, Haveli Garden Road, Chandrapur)
+  • 18th Dec: Wedding (12:30 PM) @ Chandralok Creation, Datala Road, Chandrapur
+
+  \u{1F57A} Get your dance shoes ready and start preparing for the Sangeet performances!
+
+  Please save the dates to celebrate with us! \u{1F49B}
+
+  Our wedding invitation:
+  ${inviteUrl}
+
+  Warm regards,
+  Bhaskar Sapat & Family`;
+
 
   function shareOnWhatsApp() {
     window.open(
@@ -196,6 +239,16 @@ export default function Footer() {
         </p>
 
         <div className="share-actions">
+
+          {/* Recipient name */}
+          <input
+            type="text"
+            className="recipient-name-input"
+            placeholder="Enter recipient's name (e.g. Rahul)"
+            value={recipientName}
+            onChange={(e) => setRecipientName(e.target.value)}
+            aria-label="Recipient's name"
+          />
           <button
             type="button"
             className="share-button whatsapp-button"
