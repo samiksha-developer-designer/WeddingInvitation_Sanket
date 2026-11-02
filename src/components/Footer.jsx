@@ -40,24 +40,25 @@ export default function Footer() {
   // Sanket & Pranjali`;
 
 
-  const shareMessage = `Hi ${recipientName.trim() || "there"},
+const shareMessage = `Hi ${recipientName.trim() || "there"},
 
-  We are delighted to share the joyous occasion of our son's wedding celebrations. It would mean so much to us to have you join our family in celebrating these beautiful moments!
+We are delighted to share the joyous occasion of our son's wedding celebrations. It would mean so much to us to have you join our family in celebrating these beautiful moments!
 
-  \u{1F4C5} Schedule at a glance:
-  • 16th Dec: Engagement (4:00 PM) & Sangeet (7:00 PM) @ Chandralok Creation, Datala Road, Chandrapur
-  • 17th Dec: Haldi @ Our Home (Trimurti Nagar, Haveli Garden Road, Chandrapur)
-  • 18th Dec: Wedding (12:30 PM) @ Chandralok Creation, Datala Road, Chandrapur
+ \u{1F5D3}\u{FE0F} Schedule at a glance:
 
-  \u{1F57A} Get your dance shoes ready and start preparing for the Sangeet performances!
+ • 16th Dec: Engagement (4:00 PM) & Sangeet (7:00 PM) @Chandralok Creation, Datala Road, Chandrapur
+ • 17th Dec: Haldi @Our Home (Trimurti Nagar, Haveli Garden Road, Chandrapur)
+ • 18th Dec: Wedding (12:30 PM) @Chandralok Creation, Datala Road, Chandrapur
 
-  Please save the dates to celebrate with us! \u{1F49B}
+ \u{1F57A} Get your dance shoes ready and start preparing for the Sangeet performances!
 
-  Our wedding invitation:
-  ${inviteUrl}
+ Please save the dates to celebrate with us! \u{1F49B}
 
-  Warm regards,
-  Bhaskar Sapat & Family`;
+ Our wedding invitation:
+ ${inviteUrl}
+
+ Warm regards,
+ Bhaskar Sapat & Family`;
 
 
   function shareOnWhatsApp() {
