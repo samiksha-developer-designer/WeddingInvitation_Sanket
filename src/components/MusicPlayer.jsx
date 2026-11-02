@@ -90,7 +90,7 @@ export default function MusicPlayer() {
         onPause={() => setIsPlaying(false)}
       />
 
-      {!isPlaying ? (
+      {/* {!isPlaying ? (
         <button
           className="music-button"
           type="button"
@@ -105,6 +105,39 @@ export default function MusicPlayer() {
           onClick={pauseMusic}
         >
           ⏸ Pause Music
+        </button>
+      )} */}
+      {!isPlaying ? (
+        <button
+          className="music-button"
+          type="button"
+          onClick={playMusic}
+        >
+          <svg
+            className="music-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="9" />
+            <path d="M10 8.5L16 12L10 15.5V8.5Z" />
+          </svg>
+          <span>Play Music</span>
+        </button>
+      ) : (
+        <button
+          className="music-button"
+          type="button"
+          onClick={pauseMusic}
+        >
+          <svg
+            className="music-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="9" />
+            <path d="M9.5 8.5V15.5M14.5 8.5V15.5" />
+          </svg>
+          <span>Pause Music</span>
         </button>
       )}
     </>

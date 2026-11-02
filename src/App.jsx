@@ -64,7 +64,7 @@ export default function App() {
         <header className="section-heading">
           <p className="eyebrow">✿ SAVE THE DATES ✿</p>
           <h2>Our Wedding Celebrations</h2>
-          <p>Join us in celebrating love, togetherness and new beginnings.</p>
+          <p>Join us in celebrating love, togetherness and new beginnings</p>
         </header>
 
         <div className="events-grid">

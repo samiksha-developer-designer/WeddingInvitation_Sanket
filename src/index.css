@@ -59,7 +59,7 @@ img { display: block; max-width: 100%; }
   align-items: center;
   gap: 8px;
   min-width: 0;
-  color: #f1d18a;
+  color: rgb(231, 179, 68);
   font-size: clamp(1.05rem, 2vw, 1.55rem);
   font-style: italic;
   white-space: nowrap;
@@ -436,6 +436,31 @@ img { display: block; max-width: 100%; }
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.event-play-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: transform 0.3s ease;
+}
+
+/* Filled play triangle */
+.event-play-icon path {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* Smooth hover effect */
+.event-action:hover .event-play-icon {
+  transform: scale(1.12);
+}
+
 /* .event-action {
   display: block;
   margin-top: 12px;
@@ -504,11 +529,38 @@ img { display: block; max-width: 100%; }
 .footer-message { color: #8B7060; font-style: italic; }
 .copyright { color: #8B7060; font: 0.72rem Arial, sans-serif; margin-top: 22px; }
 
+.made-with-love {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.love-heart {
+  width: 17px;
+  height: 17px;
+  fill: #C98272;
+  flex-shrink: 0;
+  animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+}
+
 
 
 .music-button span { margin-right: 6px; }
 
 .music-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
   background: #C98F72;
   color: #FFF8F0;
   border: 1px solid #b58c3b;
@@ -539,6 +591,42 @@ img { display: block; max-width: 100%; }
   padding: 20px;
   background: rgb(105 76 59 / 72%);
   backdrop-filter: blur(8px);
+}
+
+.music-icon {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Play triangle */
+.music-icon path[d*="M10 8.5"] {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* Location and Direction Arrow */
+.link-arrow {
+  width: 17px;
+  height: 17px;
+  margin-left: 5px;
+  vertical-align: middle;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.25s ease;
+}
+
+/* Elegant hover animation */
+a:hover .link-arrow {
+  transform: translate(3px, -3px);
 }
 
 /* Gold-framed video panel */
@@ -1630,3 +1718,40 @@ img { display: block; max-width: 100%; }
     transition-duration: 0.01ms !important;
   }
 }
+
+
+
+/* =========================================
+   NAVBAR ANCHOR SCROLL FIX
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+/* Our Story section */
+
+#story {
+  scroll-margin-top: 110px !important;
+}
+
+/* Events section */
+#events {
+  scroll-margin-top: 150px !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 85px;
+  }
+
+  #story,
+  #events {
+    scroll-margin-top: 85px !important;
+  }
+
+
+}
+

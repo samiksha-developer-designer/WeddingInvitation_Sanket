@@ -76,8 +76,20 @@ export default function EventCard({ event }) {
               ⌖ {event.venue}
             </p>
 
-            <span className="event-action">
+            {/* <span className="event-action">
               ▶ Watch Our Moment
+            </span> */}
+            <span className="event-action">
+              <svg
+                className="event-play-icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M10 8.5L16 12L10 15.5V8.5Z" />
+              </svg>
+            
+              <span>Watch Our Moment</span>
             </span>
           </div>
         </button>

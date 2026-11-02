@@ -86,7 +86,7 @@ export default function Footer() {
 
           <div className="story-copy">
             <p className="script-text">Sanket & Pranjali</p>
-            <h3>Two hearts, one beautiful journey.</h3>
+            <h3>Two hearts, one beautiful journey</h3>
             <p>
               From little moments to lifelong promises, our journey has
               brought us to the beginning of something beautiful. With
@@ -149,7 +149,11 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Get Directions <span aria-hidden="true">↗</span>
+            Get Directions
+            {/* <span aria-hidden="true">↗</span> */}
+            <svg className="link-arrow" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17L17 7M7 7H17V17" />
+            </svg>
           </a>
         </div>
 
@@ -163,16 +167,19 @@ export default function Footer() {
           <p>Trimurti Nagar, Haveli Garden Road, Chandrapur</p>
           <a
             className="text-link"
-            href="https://maps.app.goo.gl/4cFzSznrTCb4eSMJ9"
+            href="https://maps.app.goo.gl/bnhfWNWmAJTiZuKr9?g_st=iw"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Find the location ↗
+            Find the location
+            <svg className="link-arrow" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17L17 7M7 7H17V17" />
+            </svg>
           </a>
         </div>
 
         <p className="venue-note">
-          We can't wait to celebrate these beautiful moments with you.
+          We can't wait to celebrate these beautiful moments with you
         </p>
       </section>
 
@@ -185,7 +192,7 @@ export default function Footer() {
         </h2>
         <p className="share-description">
           Share our invitation with family and friends and help us
-          make this celebration even more special.
+          make this celebration even more special
         </p>
 
         <div className="share-actions">
@@ -217,7 +224,7 @@ export default function Footer() {
         <p className="share-feedback" aria-live="polite">
           {copied
             ? "Invitation copied! Paste it into Instagram or send it to your loved ones."
-            : "Share the love, one message at a time."}
+            : "Share the love, one message at a time"}
         </p>
       </section>
 
@@ -231,7 +238,17 @@ export default function Footer() {
         <p className="footer-message">
           Your presence will make our celebration even more special.
         </p>
-        <p className="copyright">Made with love · December 2026</p>
+        {/* <p className="copyright">Made with love · December 2026</p> */}
+        <span className="made-with-love">
+          Made with Love
+          <svg
+            className="love-heart"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M12 21s-9-5.8-9-12a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.2-9 12-9 12Z" />
+          </svg>
+        </span>
       </footer>
     </section>
   );
