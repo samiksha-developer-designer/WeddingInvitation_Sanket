@@ -1657,6 +1657,31 @@ a:hover .link-arrow {
   .bottom-date {
     font-size: 0.85rem;
   }
+
+  /* Small-screen layout refinements */
+  .navbar,
+  .hero,
+  .countdown-section,
+  .events-section,
+  .story-intro,
+  .couple-gallery-grid,
+  .venue-section,
+  .share-section,
+  .wedding-bottom {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .music-player {
+    flex-shrink: 0;
+  }
+
+  .video-modal-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
 }
 
 
@@ -1698,6 +1723,39 @@ a:hover .link-arrow {
   .countdown-box small {
     font-size: 0.5rem;
   }
+
+    /* Samsung Galaxy M30 / narrow mobile refinements */
+  .navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 8px;
+  }
+
+  .brand {
+    min-width: 0;
+    font-size: 0.82rem;
+    gap: 5px;
+  }
+
+  .brand-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-links {
+    gap: 8px 12px;
+    font-size: 0.72rem;
+  }
+
+  .video-modal {
+    padding: 10px;
+  }
+
+  .video-modal-content {
+    padding: 16px 10px;
+  }
+
+
 }
 
 
