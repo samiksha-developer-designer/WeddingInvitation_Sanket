@@ -81,10 +81,25 @@ ${inviteUrl}
 Warm regards,
 Sanket Sapat & Family`;
 
+console.log("Original:", shareMessage);
+console.log("Encoded:", encodeURIComponent(shareMessage));
+
+
+  // function shareOnWhatsApp() {
+  //   window.open(
+  //     `https://wa.me/?text=${encodeURIComponent(shareMessage)}`,
+  //     "_blank",
+  //     "noopener,noreferrer"
+  //   );
+  // }
 
   function shareOnWhatsApp() {
+    const message = shareMessage.normalize("NFC");
+  
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+  
     window.open(
-      `https://wa.me/?text=${encodeURIComponent(shareMessage)}`,
+      whatsappUrl,
       "_blank",
       "noopener,noreferrer"
     );
