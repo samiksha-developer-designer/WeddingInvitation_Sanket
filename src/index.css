@@ -1845,7 +1845,7 @@ html {
 
 
 /* Cross-platform emoji rendering */
-body,
+/* body,
 button,
 input,
 textarea {
@@ -1856,4 +1856,4 @@ textarea {
     "Apple Color Emoji",
     "Segoe UI Emoji",
     sans-serif;
-}
+} */
