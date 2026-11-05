@@ -42,7 +42,7 @@ export default function Footer() {
 
 const shareMessage = `Hi ${recipientName.trim() || "there"},
 
-We are excited to share the dates for our upcoming wedding celebrations and hope you can join us! It would mean so much to us to have you join our family in celebrating these beautiful moments!
+We are excited to share the dates for our upcoming wedding celebrations. It would mean so much to us to have you join our family in celebrating these beautiful moments!
 
  \u{1F5D3}\u{FE0F} Schedule at a glance:
 
