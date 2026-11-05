@@ -42,12 +42,12 @@ export default function Footer() {
 
 const shareMessage = `Hi ${recipientName.trim() || "there"},
 
-We are delighted to share the joyous occasion of our son's wedding celebrations. It would mean so much to us to have you join our family in celebrating these beautiful moments!
+We are excited to share the dates for our upcoming wedding celebrations and hope you can join us! It would mean so much to us to have you join our family in celebrating these beautiful moments!
 
  \u{1F5D3}\u{FE0F} Schedule at a glance:
 
- • 16th Dec: Engagement (4:00 PM) & Sangeet (7:00 PM) @Chandralok Creation, Datala Road, Chandrapur
- • 17th Dec: Haldi @Our Home (Trimurti Nagar, Haveli Garden Road, Chandrapur)
+ • 16th Dec: Engagement (3:00 PM) & Sangeet (7:00 PM) @Chandralok Creation, Datala Road, Chandrapur
+ • 17th Dec: Haldi (2:00 PM) @Our Home (Trimurti Nagar, Haveli Garden Road, Chandrapur)
  • 18th Dec: Wedding (12:30 PM) @Chandralok Creation, Datala Road, Chandrapur
 
  \u{1F57A} Get your dance shoes ready and start preparing for the Sangeet performances!
@@ -58,7 +58,7 @@ We are delighted to share the joyous occasion of our son's wedding celebrations.
  ${inviteUrl}
 
  Warm regards,
- Bhaskar Sapat & Family`;
+ Sanket Sapat & Family`;
 
 
   function shareOnWhatsApp() {
