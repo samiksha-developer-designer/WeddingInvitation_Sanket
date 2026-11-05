@@ -40,45 +40,63 @@ export default function Footer() {
   // Sanket & Pranjali`;
 
 
+// const shareMessage = `Hi ${recipientName.trim() || "there"},
+
+// We are excited to share the dates for our upcoming wedding celebrations. It would mean so much to us to have you join our family in celebrating these beautiful moments!
+
+//  \u{1F5D3}\u{FE0F} Schedule at a glance:
+
+//  • 16th Dec: Engagement (3:00 PM) & Sangeet (7:00 PM) @Chandralok Creation, Datala Road, Chandrapur
+//  • 17th Dec: Haldi (2:00 PM) @Our Home (Trimurti Nagar, Haveli Garden Road, Chandrapur)
+//  • 18th Dec: Wedding (12:30 PM) @Chandralok Creation, Datala Road, Chandrapur
+
+//  \u{1F57A} Get your dance shoes ready and start preparing for the Sangeet performances!
+
+//  Please save the dates to celebrate with us! \u{1F49B}
+
+//  Our wedding invitation:
+//  ${inviteUrl}
+
+//  Warm regards,
+//  Sanket Sapat & Family`;
+
+
 const shareMessage = `Hi ${recipientName.trim() || "there"},
 
-We are excited to share the dates for our upcoming wedding celebrations. It would mean so much to us to have you join our family in celebrating these beautiful moments!
+We are excited to share the dates for our upcoming wedding celebrations and hope you can join us! It would mean so much to us to have you join our family in celebrating these beautiful moments!
 
- \u{1F5D3}\u{FE0F}
- 📅 Schedule at a glance:
+📅 Schedule at a glance:
 
- • 16th Dec: Engagement (3:00 PM) & Sangeet (7:00 PM) @Chandralok Creation, Datala Road, Chandrapur
- • 17th Dec: Haldi (2:00 PM) @Our Home (Trimurti Nagar, Haveli Garden Road, Chandrapur)
- • 18th Dec: Wedding (12:30 PM) @Chandralok Creation, Datala Road, Chandrapur
+• 16th Dec: Engagement (3:00 PM) & Sangeet (7:00 PM) @ Chandralok Creation, Datala Road, Chandrapur
+• 17th Dec: Haldi (2:00 PM) @ Our Home (Trimurti Nagar, Haveli Garden Road, Chandrapur)
+• 18th Dec: Wedding (12:30 PM) @ Chandralok Creation, Datala Road, Chandrapur
 
- \u{1F57A}
- 🕺 Get your dance shoes ready and start preparing for the Sangeet performances!
+💃 Get your dance shoes ready and start preparing for the Sangeet performances!
 
- Please save the dates to celebrate with us! 💛
- \u{1F49B}
+Please save the dates to celebrate with us! 💛
 
- Our wedding invitation:
- ${inviteUrl}
+Our wedding invitation:
+${inviteUrl}
 
- Warm regards,
- Sanket Sapat & Family`;
+Warm regards,
+Sanket Sapat & Family`;
 
-
-  // function shareOnWhatsApp() {
-  //   window.open(
-  //     `https://wa.me/?text=${encodeURIComponent(shareMessage)}`,
-  //     "_blank",
-  //     "noopener,noreferrer"
-  //   );
-  // }
 
   function shareOnWhatsApp() {
-    const message = shareMessage.normalize("NFC");
-
-    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
-
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    window.open(
+      `https://wa.me/?text=${encodeURIComponent(shareMessage)}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
   }
+
+  // function shareOnWhatsApp() {
+  //   const message = shareMessage.normalize("NFC");
+
+  //   const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+
+  //   window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  // }
 
   async function shareOnInstagram() {
     try {

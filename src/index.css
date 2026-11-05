@@ -1844,3 +1844,16 @@ html {
 }
 
 
+/* Cross-platform emoji rendering */
+body,
+button,
+input,
+textarea {
+  font-family:
+    "Poppins",
+    "Segoe UI",
+    "Noto Color Emoji",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    sans-serif;
+}
