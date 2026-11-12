@@ -47,7 +47,7 @@ const events = [
     number: "04",
     name: "Wedding",
     date: "18th Dec 2026",
-    time: "12:30 PM",
+    time: "12:35 PM",
     venue: "Chandralok Creation, Datala Road, Chandrapur",
     tagline: "Two souls, one journey",
     image: weddingImage,

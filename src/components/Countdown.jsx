@@ -67,7 +67,7 @@ export default function Countdown() {
       <div className="countdown-side countdown-couple">
         <p>Sanket & Pranjali</p>
         <span>18th Dec 2026</span>
-        <span>12:30 PM</span>
+        <span>12:35 PM</span>
       </div>
     </section>
   );

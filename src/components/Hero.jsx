@@ -20,7 +20,7 @@ export default function Hero() {
 
         <div className="hero-date">
           <span>▦ &nbsp;18th Dec 2026</span>
-          <span>12:30 PM</span>
+          <span>12:35 PM</span>
         </div>
 
         <a href="#events" className="primary-button">

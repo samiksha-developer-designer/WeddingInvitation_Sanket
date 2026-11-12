@@ -61,25 +61,41 @@ export default function Footer() {
 //  Sanket Sapat & Family`;
 
 
+// const shareMessage = `Hi ${recipientName.trim() || "there"},
+
+// We are excited to share the dates for our upcoming wedding celebrations and hope you can join us! It would mean so much to us to have you join our family in celebrating these beautiful moments!
+
+// 📅 Schedule at a glance:
+
+// • 16th Dec: Engagement (3:00 PM) & Sangeet (7:00 PM) @ Chandralok Creation, Datala Road, Chandrapur
+// • 17th Dec: Haldi (2:00 PM) @ Our Home (Trimurti Nagar, Haveli Garden Road, Chandrapur)
+// • 18th Dec: Wedding (12:30 PM) @ Chandralok Creation, Datala Road, Chandrapur
+
+// 💃 Get your dance shoes ready and start preparing for the Sangeet performances!
+
+// Please save the dates to celebrate with us! 💛
+
+// Our wedding invitation:
+// ${inviteUrl}
+
+// Warm regards,
+// Sanket Sapat & Family`;
+
 const shareMessage = `Hi ${recipientName.trim() || "there"},
 
-We are excited to share the dates for our upcoming wedding celebrations and hope you can join us! It would mean so much to us to have you join our family in celebrating these beautiful moments!
+With immense joy, we invite you to be a part of our wedding celebrations as we embark on this beautiful new journey together. ❤️
 
-📅 Schedule at a glance:
+Your presence and blessings will make our special moments even more memorable.
 
-• 16th Dec: Engagement (3:00 PM) & Sangeet (7:00 PM) @ Chandralok Creation, Datala Road, Chandrapur
-• 17th Dec: Haldi (2:00 PM) @ Our Home (Trimurti Nagar, Haveli Garden Road, Chandrapur)
-• 18th Dec: Wedding (12:30 PM) @ Chandralok Creation, Datala Road, Chandrapur
-
-💃 Get your dance shoes ready and start preparing for the Sangeet performances!
-
-Please save the dates to celebrate with us! 💛
-
-Our wedding invitation:
+💌 Explore our wedding invitation and find all the celebration details here:
 ${inviteUrl}
 
-Warm regards,
-Sanket Sapat & Family`;
+💃🕺 Get your dance shoes ready and start preparing for the Sangeet performances!
+
+Save the dates and get ready to celebrate with us! ❤️
+
+With love,
+Sanket Sapat & Family`
 
 console.log("Original:", shareMessage);
 console.log("Encoded:", encodeURIComponent(shareMessage));
@@ -95,9 +111,9 @@ console.log("Encoded:", encodeURIComponent(shareMessage));
 
   function shareOnWhatsApp() {
     const message = shareMessage.normalize("NFC");
-  
+
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
-  
+
     window.open(
       whatsappUrl,
       "_blank",
