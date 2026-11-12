@@ -38,7 +38,7 @@ export default function Hero() {
           src={heroImage}
           alt="Wedding illustration of Sanket and Pranjali"
         />
-        <span className="hero-art-caption">सोबत तू, आणि स्वप्नं...</span>
+        {/* <span className="hero-art-caption">सोबत तू, आणि स्वप्नं...</span> */}
       </motion.div>
     </section>
   );
