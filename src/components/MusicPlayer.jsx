@@ -7,54 +7,101 @@ export default function MusicPlayer() {
 
   const [isPlaying, setIsPlaying] = useState(false);
 
-  useEffect(() => {
-    const audio = audioRef.current;
+  // useEffect(() => {
+  //   const audio = audioRef.current;
 
-    if (!audio) return;
+  //   if (!audio) return;
 
-    audio.volume = 0.25;
+  //   audio.volume = 0.25;
 
-    const startMusic = async () => {
-      try {
-        await audio.play();
-        setIsPlaying(true);
-      } catch {
-        console.log("Autoplay blocked. Waiting for user interaction.");
-        setIsPlaying(false);
-      }
-    };
+  //   const startMusic = async () => {
+  //     try {
+  //       await audio.play();
+  //       setIsPlaying(true);
+  //     } catch {
+  //       console.log("Autoplay blocked. Waiting for user interaction.");
+  //       setIsPlaying(false);
+  //     }
+  //   };
 
-    startMusic();
+  //   startMusic();
 
-    // Start music after the visitor interacts with the website
-    const handleFirstInteraction = async () => {
-      if (audio.paused) {
-        try {
-          await audio.play();
-          setIsPlaying(true);
-        } catch {
-          console.log("Music playback could not start.");
-        }
-      }
+  //   // Start music after the visitor interacts with the website
+  //   const handleFirstInteraction = async () => {
+  //     if (audio.paused) {
+  //       try {
+  //         await audio.play();
+  //         setIsPlaying(true);
+  //       } catch {
+  //         console.log("Music playback could not start.");
+  //       }
+  //     }
 
-      // Remove listeners after the first interaction
-      window.removeEventListener("click", handleFirstInteraction);
-      window.removeEventListener("keydown", handleFirstInteraction);
-      window.removeEventListener("touchstart", handleFirstInteraction);
-    };
+  //     // Remove listeners after the first interaction
+  //     window.removeEventListener("click", handleFirstInteraction);
+  //     window.removeEventListener("keydown", handleFirstInteraction);
+  //     window.removeEventListener("touchstart", handleFirstInteraction);
+  //   };
 
-    window.addEventListener("click", handleFirstInteraction);
-    window.addEventListener("keydown", handleFirstInteraction);
-    window.addEventListener("touchstart", handleFirstInteraction);
+  //   window.addEventListener("click", handleFirstInteraction);
+  //   window.addEventListener("keydown", handleFirstInteraction);
+  //   window.addEventListener("touchstart", handleFirstInteraction);
 
-    return () => {
-      audio.pause();
+  //   return () => {
+  //     audio.pause();
 
-      window.removeEventListener("click", handleFirstInteraction);
-      window.removeEventListener("keydown", handleFirstInteraction);
-      window.removeEventListener("touchstart", handleFirstInteraction);
-    };
-  }, []);
+  //     window.removeEventListener("click", handleFirstInteraction);
+  //     window.removeEventListener("keydown", handleFirstInteraction);
+  //     window.removeEventListener("touchstart", handleFirstInteraction);
+  //   };
+  // }, []);
+
+
+      useEffect(() => {
+        const audio = audioRef.current;
+
+        if (!audio) return;
+
+        audio.volume = 0.25;
+
+        const removeInteractionListeners = () => {
+          window.removeEventListener("click", handleFirstInteraction);
+          window.removeEventListener("keydown", handleFirstInteraction);
+          window.removeEventListener("touchstart", handleFirstInteraction);
+        };
+
+        const handleFirstInteraction = () => {
+          if (!audio.paused) {
+            removeInteractionListeners();
+            return;
+          }
+
+          audio.play()
+            .then(() => {
+              setIsPlaying(true);
+              removeInteractionListeners();
+            })
+            .catch((error) => {
+              console.log("Playback blocked. Waiting for another interaction.", error);
+              // IMPORTANT: Keep listeners active if playback fails.
+            });
+        };
+
+        // Attempt autoplay
+        audio.play().catch(() => {
+          console.log("Autoplay blocked. Waiting for user interaction.");
+        });
+
+        window.addEventListener("click", handleFirstInteraction);
+        window.addEventListener("keydown", handleFirstInteraction);
+        window.addEventListener("touchstart", handleFirstInteraction);
+
+        return () => {
+          audio.pause();
+          removeInteractionListeners();
+        };
+      }, []);
+
 
   const playMusic = async () => {
     const audio = audioRef.current;
@@ -83,7 +130,7 @@ export default function MusicPlayer() {
       <audio
         ref={audioRef}
         src={weddingMusic}
-        autoPlay
+        // autoPlay
         loop
         preload="auto"
         onPlay={() => setIsPlaying(true)}
