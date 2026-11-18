@@ -95,7 +95,7 @@ ${inviteUrl}
 Save the dates and get ready to celebrate with us! ❤️
 
 With love,
-Sanket Sapat & Family`
+Bhaskar Sapat & Family`
 
 console.log("Original:", shareMessage);
 console.log("Encoded:", encodeURIComponent(shareMessage));
@@ -305,10 +305,10 @@ console.log("Encoded:", encodeURIComponent(shareMessage));
           <input
             type="text"
             className="recipient-name-input"
-            placeholder="Enter recipient's name (e.g. Rahul)"
+            placeholder="Enter Guest name (e.g. Sanket)"
             value={recipientName}
             onChange={(e) => setRecipientName(e.target.value)}
-            aria-label="Recipient's name"
+            aria-label="Guest name"
           />
           <button
             type="button"
